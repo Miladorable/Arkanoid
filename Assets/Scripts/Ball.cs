@@ -27,10 +27,5 @@ public class Ball : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.name == "Ground")
-        {
-            SceneManager.LoadSceneAsync(1);
-        }
-
     }
 }
