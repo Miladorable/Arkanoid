@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Lives : MonoBehaviour
 {
-    public float Lives = 3f;
+    public float lives = 3f;
     public Text LifeText;
     public float Dammages = 1f;
 
@@ -15,16 +15,16 @@ public class Lives : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Lives -= -1f;
-            //LifeText.text = "Lives : " - Dammages;
+            lives -= -1f;
+            //LifeText.text = "lives : " - Dammages;
         }
 
-        if (Lives <= 0)
+        if (lives <= 0)
         {
-            Lives = 0;
+            lives = 0;
             SceneManager.LoadSceneAsync(1);
         }
 
     }
-
+    
 }
