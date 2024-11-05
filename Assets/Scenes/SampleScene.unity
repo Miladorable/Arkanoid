@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 70711467}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Ball
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 307300953}
   m_Layer: 0
   m_Name: Square
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 523051597}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1977,7 +1977,7 @@ Transform:
   m_GameObject: {fileID: 523051593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3252242, y: -6.92, z: 0}
+  m_LocalPosition: {x: -0.3, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3336,9 +3336,10 @@ GameObject:
   m_Component:
   - component: {fileID: 874550426}
   - component: {fileID: 874550425}
+  - component: {fileID: 874550427}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3404,6 +3405,20 @@ Transform:
   - {fileID: 307300952}
   m_Father: {fileID: 229650389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &874550427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874550424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a190b46bf4dc544d944bddf2b43ab81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  LifeText: {fileID: 243542780}
 --- !u!1 &888957321
 GameObject:
   m_ObjectHideFlags: 0

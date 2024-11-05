@@ -27,5 +27,10 @@ public class Ball : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            Rb2d.transform.position = new Vector3(-0.3f, -7f, 0f);
+        }
+
     }
 }

@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class Lives : MonoBehaviour
 {
     public int lives = 3;
-    public Text LifeText;
+    public TMPro.TextMeshProUGUI LifeText;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ball"))
         {
             lives -- ;
             LifeText.text = "lives : " + lives;
