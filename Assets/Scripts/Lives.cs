@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class Lives : MonoBehaviour
 {
-    public float lives = 3f;
+    public int lives = 3;
     public Text LifeText;
-    public float Dammages = 1f;
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            lives -= -1f;
-            //LifeText.text = "lives : " - Dammages;
+            lives -- ;
+            LifeText.text = "lives : " + lives;
         }
 
         if (lives <= 0)
