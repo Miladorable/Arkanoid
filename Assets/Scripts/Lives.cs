@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
-public class Lives : MonoBehaviour
+public class lives : MonoBehaviour
 {
-    public int lives = 3;
+    public int Lives = 3;
     public TMPro.TextMeshProUGUI LifeText;
-    public GameObject Lifecanva;
+    public GameObject Loosecanva;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -17,14 +17,14 @@ public class Lives : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ball"))
         {
-            lives -- ;
-            LifeText.text = "lives : " + lives;
+            Lives -- ;
+            LifeText.text = "Lives : " + Lives;
         }
 
-        if (lives <= 0)
+        if (Lives <= 0)
         {
-            lives = 0;
-            Lifecanva.SetActive(true);
+            Lives = 0;
+            Loosecanva.SetActive(true);
             Time.timeScale = 0;
         }  
 

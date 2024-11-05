@@ -5,29 +5,32 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
+public class score : MonoBehaviour
 {
-    public int score = 0;
+    public int Score = 0;
     public TMPro.TextMeshProUGUI ScoreText;
-    public TMPro.TextMeshProUGUI ScoreTextFinal;
-    public GameObject canvas;
+    public TMPro.TextMeshProUGUI ScoreTextFinalWin;
+    public TMPro.TextMeshProUGUI ScoreTextFinalLoose;
+    public GameObject Wincanva;
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.CompareTag("Brick"))
         {
-            score += 1;
-            ScoreText.text = "Score : " + score;
-            ScoreTextFinal.text = ScoreText.text;
+            Score += 1;
+            ScoreText.text = "Score : " + Score;
+            ScoreTextFinalWin.text = ScoreText.text;
+            ScoreTextFinalLoose.text = ScoreText.text;
         }
 
     }
 
     private void Update()
     {
-        if(score==25)
+        if(Score==25)
         {
-            canvas.SetActive(true);
+            Wincanva.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
